@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Array.prototype.forEach.call(allFriendsWindow, function (el) {
         for (let i = 0; i < data.friends.length; i++) {
             if (el.className.includes('window-' + i)) {
-                el.style.background = "url('../static/images/friends-person+window.png') no-repeat center";
+                el.style.background = "url('./static/images/friends-person+window.png') no-repeat center";
                 el.innerText = data.friends[i].name
             }
         }
