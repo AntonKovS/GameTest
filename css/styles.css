@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.board {
+    width: 980px;
+    height: 630px;
+    background: url('../static/images/board-background.png') no-repeat;
+    background-size: cover;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.board-nav {
+    width: 100%;
+    height: 63px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.board-nav-friends {
+    width: 536px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/friends-background.png') no-repeat center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    /*gap: 0;*/
+}
+
+.board-nav-friends-arrow-left {
+    width: 14px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/friends-arrow-left.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-nav-friends-windows {
+    width: 465px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-nav-friends-window {
+    width: 50px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/friends-window.png') no-repeat center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 10px;
+    color: #037266;
+    padding-bottom: 20px;
+}
+
+.board-nav-friends-arrow-right {
+    width: 14px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/friends-arrow-right.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-nav-friends-plus {
+    width: 34px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/friends-plus.png') no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    left: 57px;
+    top: -17px;
+}
+
+.board-nav-chat {
+    width: 65px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/button-chat-1.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-nav-univer {
+    width: 205px;
+    height: 100%;
+    background-size: contain;
+    box-sizing: border-box;
+    background: url('../static/images/button-univer.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-nav-messages {
+    width: 66px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/button-messages.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-nav-rating {
+    width: 66px;
+    height: 100%;
+    background-size: contain;
+    background: url('../static/images/button-rating.png') no-repeat center;
+    cursor: pointer;
+}
+
+.board-girl {
+    width: 21px;
+    height: 71px;
+    background-size: contain;
+    background: url('../static/images/girl.png') no-repeat center;
+    position: absolute;
+    transition: all 1.5s ease;
+    will-change: transform, left, top;
+    transform: translateZ(0);
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.popup-rating {
+    width: 523px;
+    height: 455px;
+    background-size: contain;
+    background: url('../static/images/rating-backgrond.png') no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 0;
+    position: relative;
+    top: -500px;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.popup-rating-title {
+    width: 264px;
+    height: 34px;
+    background-size: contain;
+    background: url('../static/images/rating-title.png') no-repeat center;
+    position: absolute;
+    left: calc(50% - 132px);
+    top: -13px;
+}
+
+.popup-rating-body {
+    width: 464px;
+    height: 324px;
+    background-color: #8c5a31;
+    border-radius: 20px;
+    margin: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.popup-rating-body-title {
+    width: 404px;
+    height: 30px;
+    background-size: contain;
+    background: url('../static/images/rating-table-title.png') no-repeat center;
+    margin: 32px 0 7px 0;
+}
+
+.popup-rating-body-list {
+    width: 404px;
+    height: 224px;
+    overflow-y: scroll;
+}
+
+.popup-rating-body-list::-webkit-scrollbar {
+    width: 0;
+}
+
+.popup-rating-body-list-item {
+    width: 404px;
+    height: 27px;
+    background-size: contain;
+    background: url('../static/images/rating-table-friend-background+cube.png') no-repeat center;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: transparent 0 0 5px;
+}
+
+.popup-rating-body-list-item-rate {
+    width: 64px;
+    height: 100%;
+    margin-right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-rating-body-list-item-name {
+    width: 220px;
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.popup-rating-body-list-item-points {
+    width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.popup-rating-close {
+    width: 26px;
+    height: 26px;
+    background-size: contain;
+    background: url('../static/images/rating-close.png') no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
