@@ -137,11 +137,11 @@ document.addEventListener('DOMContentLoaded', function () {
     girl.style.top = route[0].top;
 
     arrowLeft.addEventListener("click", () => {
-        friendsWindowsParent.appendChild(allFriendsWindow[0]);
+        friendsWindowsParent.prepend(allFriendsWindow[7]);
     });
 
     arrowRight.addEventListener("click", () => {
-        friendsWindowsParent.prepend(allFriendsWindow[7]);
+        friendsWindowsParent.appendChild(allFriendsWindow[0]);
     });
 
     buttonUniver.addEventListener("click", () => {
